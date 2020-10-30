@@ -11,7 +11,7 @@ Feel free to try and use the latest version of Python (3.9). At the time of writ
   - If you don't have it already
   - To clone and push to the repo
 
-## Cloning the directory
+## Cloning the repository
 - Open CMD/Powershell/Terminal
   - CD into the directory of your choice (we'll be using desktop)\
 
