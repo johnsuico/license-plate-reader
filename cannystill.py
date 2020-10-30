@@ -1,32 +1,28 @@
-import cv2
+import cv2 as cv
 import numpy as np
 import os
 
-def main():
-    imgOriginal = cv2.imread("image.jpg")
+originalImg = cv.imread("image.jpg")
 
-    if imgOriginal is None:                             
-        print ("error: image not read from file \n\n")        
-        os.system("pause")                                  
-        return                                              
-    
-    imgGrayscale = cv2.cvtColor(imgOriginal, cv2.COLOR_BGR2GRAY)        # convert to grayscale
+if originalImg is None:                             
+    print ("error: image not read from file \n\n")        
+    os.system("pause")                                          
 
-    imgBlurred = cv2.GaussianBlur(imgGrayscale, (5, 5), 0)              # blur
-    
-    imgCanny = cv2.Canny(imgBlurred, 100, 200)                          # get Canny edges
+# Grayscale the image
+grayscale = cv.cvtColor(originalImg, cv.COLOR_BGR2GRAY)
 
-    cv2.namedWindow("imgOriginal", cv2.WINDOW_AUTOSIZE)        
-    cv2.namedWindow("imgCanny", cv2.WINDOW_AUTOSIZE)           
+# Blur the image using gaussianblur
+blurredImg = cv.GaussianBlur(grayscale, (5, 5), 0)
 
-    cv2.imshow("imgOriginal", imgOriginal)         
-    cv2.imshow("imgCanny", imgCanny)
+# Get the canny edges of the blurred image
+cannyImg = cv.Canny(blurredImg, 100, 200)
 
-    cv2.waitKey()                               
+cv.namedWindow("Original Image", cv.WINDOW_AUTOSIZE)        
+cv.namedWindow("Canny Edges", cv.WINDOW_AUTOSIZE)           
 
-    cv2.destroyAllWindows()                     
+cv.imshow("Original Image", originalImg)         
+cv.imshow("Canny Edges", cannyImg)
 
-    return
+cv.waitKey()                               
 
-if __name__ == "__main__":
-    main()
+cv.destroyAllWindows()                     
