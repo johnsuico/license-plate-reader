@@ -1,4 +1,4 @@
-# license-plate-reader
+# License Plate Reader
 CMPE 188 Project. The goal is to create an application that will take in user images of license plates and the application will be able to read the license plate.
 
 ## Python Requirements
