@@ -1,4 +1,4 @@
-# license-plate-reader
+# License Plate Reader
 CMPE 188 Project. The goal is to create an application that will take in user images of license plates and the application will be able to read the license plate.
 
 ## Python Requirements
@@ -28,15 +28,15 @@ Feel free to try and use the latest version of Python (3.9). At the time of writ
 - Install OpenCV
 
   ``` pip install opencv-python ```
+- Download and install PyTesseract
+  - Refer to the pyteseract documentation for installation since it seems like different people install it differently
+  - [pytesseract](https://pypi.org/project/pytesseract/)
+  
+- Install pandas
 
+  ` pip install pandas `
+  
 ## Running the program
-At the moment of writing this, there is only one python file. "cannystill.py"
-This file just takes an image and gets the canny edges and returns the image to the window
-
-- Go into the license-plate-reader directory
-
-  ``` cd license-plate-reader ```
-
-- Run "cannystill.py"
-
-  ``` py cannystill.py ```
+- cd into where you placed the repository using CMD, PoweShell, or Terminal
+- Type `py main.py`
+- Follow the instructions on the screen
